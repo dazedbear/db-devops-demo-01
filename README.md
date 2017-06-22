@@ -1,1 +1,1 @@
-# db-devops-demo-01
+# Skeleton project for Swagger
