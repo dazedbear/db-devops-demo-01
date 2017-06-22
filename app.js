@@ -21,4 +21,5 @@ SwaggerRestify.create(config, function(err, swaggerRestify) {
   if (swaggerRestify.runner.swagger.paths['/hello']) {
     console.log('try this:\ncurl http://127.0.0.1:' + port + '/hello?name=Scott');
   }
+  console.log(swaggerRestify.runner.swagger.paths);
 });

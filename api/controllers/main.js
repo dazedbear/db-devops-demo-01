@@ -3,7 +3,7 @@
 var util = require('util');
 
 module.exports = {
-  hello: yooo
+  yooo: yooo
 };
 
 function yooo(req, res) {

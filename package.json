@@ -8,6 +8,8 @@
   "license": "",
   "main": "app.js",
   "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
     "restify": "^4.0.2",
     "swagger": "^0.7.5",
     "swagger-restify-mw": "^0.1.0"
