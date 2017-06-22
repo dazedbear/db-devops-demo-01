@@ -1,0 +1,11 @@
+
+  #th: dockercfg.encrypted
+  steps:
+  - service: app
+    command: ./script/ci/ci.parallel spec
+  - service: app
+    command: ./script/ci/ci.parallel plugin
+  - service: app
+    command: ./script/ci/ci.parallel qunit
+  - service: app
+    command: phantomjs --help escape sequence with a single literal character.
