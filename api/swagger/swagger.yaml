@@ -42,30 +42,34 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /yooo:
-    # binds a127 app logic to a route
-    x-swagger-router-controller: main
+  /lotteryBoom:
+    # binds a127 app logic to a route (js檔名)
+    x-swagger-router-controller: lottery
     get:
-      description: Returns 'Yooo' to the caller
-      # used as the method name of the controller
-      operationId: yooo
-      parameters:
-        - name: name
-          in: query
-          description: The name of the person to whom to say yooo~
-          required: false
-          type: string
+      description: Returns Boom luckynumber.
+      # used as the method name of the controller （method）
+      operationId: lottery_boom
       responses:
         "200":
           description: Success
-          schema:
-            # a pointer to a definition
-            $ref: "#/definitions/HelloWorldResponse"
-        # responses may fall through to errors
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
+  /check_number:
+    # binds a127 app logic to a route (js檔名)
+    x-swagger-router-controller: lottery
+    get:
+      description: check your number and win first prize
+      # used as the method name of the controller （method）
+      operationId: check_number
+      parameters:
+        - name: match_numbers
+          in: query
+          description: the numbers to check
+          format: '1,2,3,4,5,6'
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success，and return boolean
+          
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
