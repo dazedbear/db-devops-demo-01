@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "",
+  "engine":{
+    "node":"^6.0.0"
+  },
   "main": "app.js",
   "dependencies": {
     "bl": "^1.2.1",
@@ -21,6 +24,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "swagger project test"
+    "test": "swagger project test",
+    "edit":"swagger project edit"
   }
 }
